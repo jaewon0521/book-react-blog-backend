@@ -77,12 +77,10 @@ export const login = async ctx => {
   } catch (e) {
     ctx.throw(500, e);
   }
-
 }
 
 export const check = async ctx => {
   const { user } = ctx.state;
-  console.log(user);
   if (!user) {
     // 로그인 중 아님
     ctx.status = 401;
